@@ -129,8 +129,10 @@ export class TokenService {
             if (!this.tokenPool.get(resource) ) {
                 this.tokenPool.set(resource, [])
             }
-            this.tokenPool.get(resource).push(result)
-            console.log("added new token to pool");
+            if ( result ) {
+                this.tokenPool.get(resource).push(result)
+                console.log("added new token to pool");
+            }
         }
 
         if (result !== null) {
