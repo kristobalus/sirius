@@ -12,7 +12,7 @@ export enum Resource {
     listMembers = "listMembers",
     listTweets = "listTweets",
     userRestId = "userRestId",
-    userScreenName = "userScreenName",
+    UserScreenName = "UserScreenName",
     UserTweets = "UserTweets",
     UserTweetsAndReplies = "UserTweetsAndReplies",
     UserMedia = "UserMedia"

@@ -4,7 +4,7 @@ import {
     gqlFeatures,
     graphUserMediaUrl,
     graphUserTweetsAndRepliesUrl,
-    graphUserTweetsUrl,
+    graphUserTweetsUrl, graphUserUrl,
     Headers,
     userSearchUrl,
     userTweetsVariables
@@ -14,6 +14,7 @@ import { default as axios } from "axios";
 import * as console from "console";
 import { Query } from "../models/query";
 import { Timeline } from "../models/timeline";
+
 
 export class ApiService {
 
@@ -126,6 +127,16 @@ export class ApiService {
         console.log(endpoint.toString())
 
         return await this.call(endpoint.toString(), resource)
+    }
+
+    async getGraphUser(username: string) {
+
+        const variables = `{"screen_name": "${username}"}`;
+        const endpoint = new URL(graphUserUrl);
+        endpoint.searchParams.append("variables", variables);
+        endpoint.searchParams.append("features", JSON.stringify(gqlFeatures));
+
+        return await this.call(endpoint.toString(), Resource.UserScreenName)
     }
 
 }

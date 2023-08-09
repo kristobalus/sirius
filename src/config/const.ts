@@ -4,6 +4,7 @@ export const auth = "Bearer AAAAAAAAAAAAAAAAAAAAAFQODgEAAAAAVHTp76lzh3rFzcHbmHVv
 export const activateUrl = "https://api.twitter.com/1.1/guest/activate.json"
 export const userSearchUrl = "https://api.twitter.com/1.1/users/search.json"
 export const graphql = "https://api.twitter.com/graphql"
+export const graphUserUrl = `${graphql}/u7wQyGi6oExe8_TRWGMq4Q/UserResultByScreenNameQuery`
 export const graphUserTweetsUrl = `${graphql}/3JNH4e9dq1BifLxAa3UMWg/UserWithProfileTweetsQueryV2`
 export const graphUserTweetsAndRepliesUrl = `${graphql}/8IS8MaO-2EN6GZZZb8jF0g/UserWithProfileTweetsAndRepliesQueryV2`
 export const graphUserMediaUrl = `${graphql}/PDfFf8hGeJvUCiTyWtw4wQ/MediaTimelineV2`

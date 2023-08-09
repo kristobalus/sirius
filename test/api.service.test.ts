@@ -19,4 +19,11 @@ describe('ApiService', function() {
         console.log(JSON.stringify(result))
     })
 
+    it('getGraphUser', async () => {
+        const tokenService = new TokenService()
+        const apiService = new ApiService(tokenService)
+        const result = await apiService.getGraphUser("elonmusk")
+        console.log(JSON.stringify(result))
+    })
+
 })
