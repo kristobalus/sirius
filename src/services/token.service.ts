@@ -59,7 +59,7 @@ export class TokenService {
             if (!e.message.includes("Try again")) {
                 console.log("[tokens] fetching tokens paused, resuming in 30 minutes");
             }
-
+            this.lastFailedTime = Date.now()
             return null
         }
     }
